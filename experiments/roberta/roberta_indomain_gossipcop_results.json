@@ -1,0 +1,54 @@
+{
+  "experiment_id": "roberta_indomain_gossipcop",
+  "experiment_type": "indomain",
+  "train_datasets": [
+    "gossipcop"
+  ],
+  "test_dataset": "gossipcop",
+  "model": "roberta-base",
+  "n_train": 13968,
+  "n_val": 1994,
+  "n_test": 3993,
+  "n_fake_test": 955,
+  "n_real_test": 3038,
+  "macro_f1": 0.7957883416499831,
+  "f1_fake": 0.6915601023017903,
+  "f1_real": 0.900016580998176,
+  "mcc": 0.5919217310720085,
+  "roc_auc": 0.8951407822037785,
+  "pr_auc": 0.9589442163884443,
+  "brier": 0.10230059979023677,
+  "ece_before_calibration": 0.06706530128897448,
+  "ece_after_calibration": 0.04940022143922128,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.48805556489839585,
+      0.31142148293580385,
+      0.2269179104973497
+    ],
+    "val_loss": [
+      0.3866084624850561,
+      0.47640444172753227,
+      0.5239839948832042
+    ],
+    "val_macro_f1": [
+      0.7956590354778545,
+      0.7815014786526133,
+      0.7807448627332176
+    ],
+    "val_mcc": [
+      0.5915411241986785,
+      0.5683531565820111,
+      0.5672798139358352
+    ],
+    "best_val_f1": 0.7956590354778545
+  }
+}

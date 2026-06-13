@@ -1,0 +1,54 @@
+{
+  "experiment_id": "roberta_indomain_kaggle_fakenews",
+  "experiment_type": "indomain",
+  "train_datasets": [
+    "kaggle_fakenews"
+  ],
+  "test_dataset": "kaggle_fakenews",
+  "model": "roberta-base",
+  "n_train": 30821,
+  "n_val": 4402,
+  "n_test": 8808,
+  "n_fake_test": 4524,
+  "n_real_test": 4284,
+  "macro_f1": 0.9998863831948879,
+  "f1_fake": 0.9998894661213662,
+  "f1_real": 0.9998833002684094,
+  "mcc": 0.9997727922043972,
+  "roc_auc": 0.9998894783377542,
+  "pr_auc": 0.9997666277712952,
+  "brier": 0.00011356033409971639,
+  "ece_before_calibration": 1.1324814836292458e-06,
+  "ece_after_calibration": 0.0001799708111702186,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.04636227653690976,
+      0.002035295497770868,
+      0.0010647098952831612
+    ],
+    "val_loss": [
+      3.937409887576127e-06,
+      4.9845044071369795e-06,
+      9.814760198384211e-07
+    ],
+    "val_macro_f1": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "val_mcc": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "best_val_f1": 1.0
+  }
+}
