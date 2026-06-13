@@ -1,0 +1,54 @@
+{
+  "experiment_id": "roberta_kaggle_to_liar",
+  "experiment_type": "crossdomain",
+  "train_datasets": [
+    "kaggle_fakenews"
+  ],
+  "test_dataset": "liar",
+  "model": "roberta-base",
+  "n_train": 39629,
+  "n_val": 4402,
+  "n_test": 11387,
+  "n_fake_test": 4931,
+  "n_real_test": 6456,
+  "macro_f1": 0.33350233466512536,
+  "f1_fake": 0.598240100565682,
+  "f1_real": 0.06876456876456877,
+  "mcc": 0.004462066961900414,
+  "roc_auc": 0.5157055532394127,
+  "pr_auc": 0.579135919578768,
+  "brier": 0.560790584864591,
+  "ece_before_calibration": 0.5588733053106897,
+  "ece_after_calibration": 0.5609290144575578,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.0403820916865466,
+      0.001685382489367887,
+      0.0012937687585666165
+    ],
+    "val_loss": [
+      1.797755511477695e-06,
+      1.4174570615200471e-05,
+      0.0057026662934278475
+    ],
+    "val_macro_f1": [
+      1.0,
+      1.0,
+      0.9993180098136146
+    ],
+    "val_mcc": [
+      1.0,
+      1.0,
+      0.998636949214041
+    ],
+    "best_val_f1": 1.0
+  }
+}

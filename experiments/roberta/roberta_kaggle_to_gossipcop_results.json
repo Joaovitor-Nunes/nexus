@@ -1,0 +1,58 @@
+{
+  "experiment_id": "roberta_kaggle_to_gossipcop",
+  "experiment_type": "crossdomain",
+  "train_datasets": [
+    "kaggle_fakenews"
+  ],
+  "test_dataset": "gossipcop",
+  "model": "roberta-base",
+  "n_train": 39629,
+  "n_val": 4402,
+  "n_test": 19955,
+  "n_fake_test": 4769,
+  "n_real_test": 15186,
+  "macro_f1": 0.46182504879834896,
+  "f1_fake": 0.24013634426927993,
+  "f1_real": 0.6835137533274179,
+  "mcc": -0.0630547416708397,
+  "roc_auc": 0.459316152319058,
+  "pr_auc": 0.7424585441369453,
+  "brier": 0.4437391616483453,
+  "ece_before_calibration": 0.2882595962642936,
+  "ece_after_calibration": 0.44360461613134994,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.0403202333585645,
+      0.0011793757109426423,
+      2.182670503799718e-06,
+      0.0002612562393783811
+    ],
+    "val_loss": [
+      0.0054169605619573185,
+      5.598733390586964e-07,
+      1.4749090168188428e-07,
+      1.285435113198917e-07
+    ],
+    "val_macro_f1": [
+      0.9993179590935559,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "val_mcc": [
+      0.9986368479121025,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "best_val_f1": 1.0
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "experiment_id": "roberta_kaggle_to_politifact",
+  "experiment_type": "crossdomain",
+  "train_datasets": [
+    "kaggle_fakenews"
+  ],
+  "test_dataset": "politifact",
+  "model": "roberta-base",
+  "n_train": 39629,
+  "n_val": 4402,
+  "n_test": 2156,
+  "n_fake_test": 1781,
+  "n_real_test": 375,
+  "macro_f1": 0.34706704408755906,
+  "f1_fake": 0.39219088937093277,
+  "f1_real": 0.30194319880418535,
+  "mcc": 0.05460596766378597,
+  "roc_auc": 0.534990829122216,
+  "pr_auc": 0.1861030016094618,
+  "brier": 0.6495878791113605,
+  "ece_before_calibration": 0.04350585674310659,
+  "ece_after_calibration": 0.6497398473658355,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.040651421917269295,
+      0.0011613233581410738,
+      8.00005773459728e-07,
+      0.00020267383735234437
+    ],
+    "val_loss": [
+      0.0031776951742923643,
+      6.559693918913014e-05,
+      6.428117385447929e-06,
+      1.1162103518195774e-06
+    ],
+    "val_macro_f1": [
+      0.999545323181019,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "val_mcc": [
+      0.999090646362038,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "best_val_f1": 1.0
+  }
+}

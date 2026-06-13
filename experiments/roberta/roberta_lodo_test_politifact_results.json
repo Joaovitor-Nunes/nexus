@@ -1,0 +1,56 @@
+{
+  "experiment_id": "roberta_lodo_test_politifact",
+  "experiment_type": "lodo",
+  "train_datasets": [
+    "kaggle_fakenews",
+    "gossipcop",
+    "liar"
+  ],
+  "test_dataset": "politifact",
+  "model": "roberta-base",
+  "n_train": 67837,
+  "n_val": 7536,
+  "n_test": 2156,
+  "n_fake_test": 1781,
+  "n_real_test": 375,
+  "macro_f1": 0.4706166088182517,
+  "f1_fake": 0.5749709414955444,
+  "f1_real": 0.36626227614095896,
+  "mcc": 0.20554006035460975,
+  "roc_auc": 0.67942953396968,
+  "pr_auc": 0.25782645060405374,
+  "brier": 0.2532792779330176,
+  "ece_before_calibration": 0.34333102026321893,
+  "ece_after_calibration": 0.328024229481064,
+  "hyperparams": {
+    "max_length": 512,
+    "head_len": 128,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "epochs": 4,
+    "dropout": 0.1
+  },
+  "history": {
+    "train_loss": [
+      0.24831880894050284,
+      0.1788799072123783,
+      0.15254927266758145
+    ],
+    "val_loss": [
+      0.20222519699610392,
+      0.25220449649239496,
+      0.33341745553948615
+    ],
+    "val_macro_f1": [
+      0.9036150267998394,
+      0.9020083411472901,
+      0.9033603484219144
+    ],
+    "val_mcc": [
+      0.8104146965593141,
+      0.8046132124615509,
+      0.808731925464181
+    ],
+    "best_val_f1": 0.9036150267998394
+  }
+}
