@@ -1,0 +1,61 @@
+{
+  "bias_flags": {
+    "kaggle_fakenews": [
+      {
+        "type": "LENGTH_SHORTCUT",
+        "severity": "MEDIUM",
+        "detail": "Comprimento difere significativamente (p<0.01) entre fake/real. Fake médio: 435w, Real médio: 386w",
+        "recommendation": "Analisar se modelo aprende comprimento como feature"
+      },
+      {
+        "type": "STYLOMETRIC_SHORTCUTS",
+        "severity": "HIGH",
+        "detail": "Features estilométricas discriminativas detectadas: ['exclaim_density']. Modelo pode aprender estilo em vez de factualidade.",
+        "recommendation": "Documentar como confound; testar modelo sem essas features"
+      }
+    ],
+    "liar": [
+      {
+        "type": "LENGTH_SHORTCUT",
+        "severity": "MEDIUM",
+        "detail": "Comprimento difere significativamente (p<0.01) entre fake/real. Fake médio: 17w, Real médio: 19w",
+        "recommendation": "Analisar se modelo aprende comprimento como feature"
+      },
+      {
+        "type": "STYLOMETRIC_SHORTCUTS",
+        "severity": "HIGH",
+        "detail": "Features estilométricas discriminativas detectadas: ['caps_ratio']. Modelo pode aprender estilo em vez de factualidade.",
+        "recommendation": "Documentar como confound; testar modelo sem essas features"
+      }
+    ],
+    "politifact": [
+      {
+        "type": "CLASS_IMBALANCE",
+        "severity": "HIGH",
+        "detail": "Razão fake/total = 0.830. Usar weighted loss ou oversampling.",
+        "recommendation": "weighted_loss or SMOTE"
+      },
+      {
+        "type": "LENGTH_SHORTCUT",
+        "severity": "MEDIUM",
+        "detail": "Comprimento difere significativamente (p<0.01) entre fake/real. Fake médio: 15w, Real médio: 17w",
+        "recommendation": "Analisar se modelo aprende comprimento como feature"
+      },
+      {
+        "type": "STYLOMETRIC_SHORTCUTS",
+        "severity": "HIGH",
+        "detail": "Features estilométricas discriminativas detectadas: ['caps_ratio', 'exclaim_density']. Modelo pode aprender estilo em vez de factualidade.",
+        "recommendation": "Documentar como confound; testar modelo sem essas features"
+      }
+    ],
+    "gossipcop": [
+      {
+        "type": "CLASS_IMBALANCE",
+        "severity": "HIGH",
+        "detail": "Razão fake/total = 0.239. Usar weighted loss ou oversampling.",
+        "recommendation": "weighted_loss or SMOTE"
+      }
+    ]
+  },
+  "total_flags": 8
+}

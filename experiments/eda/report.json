@@ -1,0 +1,354 @@
+{
+  "class_distribution": {
+    "kaggle_fakenews": {
+      "total": 44267,
+      "n_fake": 22851,
+      "n_real": 21416,
+      "imbalance_ratio": 0.5162084622856755,
+      "needs_weighted_loss": "False"
+    },
+    "liar": {
+      "total": 12791,
+      "n_fake": 5657,
+      "n_real": 7134,
+      "imbalance_ratio": 0.44226409193964505,
+      "needs_weighted_loss": "False"
+    },
+    "politifact": {
+      "total": 2512,
+      "n_fake": 2086,
+      "n_real": 426,
+      "imbalance_ratio": 0.8304140127388535,
+      "needs_weighted_loss": "True"
+    },
+    "gossipcop": {
+      "total": 20007,
+      "n_fake": 4784,
+      "n_real": 15223,
+      "imbalance_ratio": 0.23911630929174787,
+      "needs_weighted_loss": "True"
+    }
+  },
+  "text_length": {
+    "kaggle_fakenews": {
+      "fake_word_mean": 434.8654325850072,
+      "fake_word_median": 369.0,
+      "real_word_mean": 385.65810608890547,
+      "real_word_median": 359.0,
+      "mannwhitney_p": 1.4618302058934323e-35,
+      "length_is_shortcut": "True",
+      "pct_above_512": 0.2535974879707231,
+      "recommended_max_len": 750
+    },
+    "liar": {
+      "fake_word_mean": 17.41647516351423,
+      "fake_word_median": 16.0,
+      "real_word_mean": 18.53546397532941,
+      "real_word_median": 17.0,
+      "mannwhitney_p": 6.068724550167592e-14,
+      "length_is_shortcut": "True",
+      "pct_above_512": 0.0,
+      "recommended_max_len": 28
+    },
+    "politifact": {
+      "fake_word_mean": 15.480824544582934,
+      "fake_word_median": 14.0,
+      "real_word_mean": 17.387323943661972,
+      "real_word_median": 16.0,
+      "mannwhitney_p": 1.7464328562677688e-06,
+      "length_is_shortcut": "True",
+      "pct_above_512": 0.0,
+      "recommended_max_len": 24
+    },
+    "gossipcop": {
+      "fake_word_mean": 567.6511287625418,
+      "fake_word_median": 361.0,
+      "real_word_mean": 615.6661630427642,
+      "real_word_median": 354.0,
+      "mannwhitney_p": 0.4773208112796572,
+      "length_is_shortcut": "False",
+      "pct_above_512": 0.29429699605138204,
+      "recommended_max_len": 1141
+    }
+  },
+  "vocabulary_overlap": {
+    "jaccard_matrix": [
+      [
+        1.0,
+        0.4249073810202337,
+        0.2507817385866166,
+        0.40785583556243843
+      ],
+      [
+        0.4249073810202337,
+        1.0,
+        0.2413108242303873,
+        0.28090175483540414
+      ],
+      [
+        0.2507817385866166,
+        0.2413108242303873,
+        1.0,
+        0.21080033902409492
+      ],
+      [
+        0.40785583556243843,
+        0.28090175483540414,
+        0.21080033902409492,
+        1.0
+      ]
+    ],
+    "dataset_names": [
+      "kaggle_fakenews",
+      "liar",
+      "politifact",
+      "gossipcop"
+    ],
+    "cross_domain_challenge": {
+      "kaggle_fakenews_vs_liar": 0.4249073810202337,
+      "kaggle_fakenews_vs_politifact": 0.2507817385866166,
+      "kaggle_fakenews_vs_gossipcop": 0.40785583556243843,
+      "liar_vs_politifact": 0.2413108242303873,
+      "liar_vs_gossipcop": 0.28090175483540414,
+      "politifact_vs_gossipcop": 0.21080033902409492
+    }
+  },
+  "stylometric_signals": {
+    "kaggle_fakenews": {
+      "caps_ratio": {
+        "fake_mean": 0.0468228792279085,
+        "real_mean": 0.04179584740607247,
+        "mannwhitney_p": 4.87965457847009e-10,
+        "cohens_d": 0.14570524117785746,
+        "is_shortcut": "False"
+      },
+      "exclaim_density": {
+        "fake_mean": 0.0654310019937625,
+        "real_mean": 0.003094565054038209,
+        "mannwhitney_p": 0.0,
+        "cohens_d": 0.39177964203962784,
+        "is_shortcut": "True"
+      },
+      "type_token_ratio": {
+        "fake_mean": 0.6128079157892687,
+        "real_mean": 0.6297498042116627,
+        "mannwhitney_p": 6.149978577296725e-100,
+        "cohens_d": -0.15913881588346837,
+        "is_shortcut": "False"
+      },
+      "avg_word_len": {
+        "fake_mean": 5.150601353056889,
+        "real_mean": 5.177394211406208,
+        "mannwhitney_p": 0.0,
+        "cohens_d": -0.012938047228739395,
+        "is_shortcut": "False"
+      }
+    },
+    "liar": {
+      "caps_ratio": {
+        "fake_mean": 0.040040775876465054,
+        "real_mean": 0.03433000520900683,
+        "mannwhitney_p": 2.5623726706298724e-41,
+        "cohens_d": 0.21364600864125,
+        "is_shortcut": "True"
+      },
+      "exclaim_density": {
+        "fake_mean": 0.007409698898120322,
+        "real_mean": 0.0035744322960470985,
+        "mannwhitney_p": 0.0038113502187820383,
+        "cohens_d": 0.04292085381527494,
+        "is_shortcut": "False"
+      },
+      "type_token_ratio": {
+        "fake_mean": 0.9474610020934858,
+        "real_mean": 0.9368567738207252,
+        "mannwhitney_p": 2.871536980240804e-15,
+        "cohens_d": 0.15248669999830475,
+        "is_shortcut": "False"
+      },
+      "avg_word_len": {
+        "fake_mean": 5.10280251873741,
+        "real_mean": 5.0284893157016075,
+        "mannwhitney_p": 3.6693737295709894e-09,
+        "cohens_d": 0.1065268403536418,
+        "is_shortcut": "False"
+      }
+    },
+    "politifact": {
+      "caps_ratio": {
+        "fake_mean": 0.05634731911717548,
+        "real_mean": 0.04108073249842242,
+        "mannwhitney_p": 8.369279560577319e-23,
+        "cohens_d": 0.4840397330151145,
+        "is_shortcut": "True"
+      },
+      "exclaim_density": {
+        "fake_mean": 0.030121444550974753,
+        "real_mean": 0.0031298904538341154,
+        "mannwhitney_p": 0.0019647033502361968,
+        "cohens_d": 0.203432677281282,
+        "is_shortcut": "True"
+      },
+      "type_token_ratio": {
+        "fake_mean": 0.9655985851145752,
+        "real_mean": 0.9563297586837214,
+        "mannwhitney_p": 0.0022185905865919923,
+        "cohens_d": 0.15954869383253037,
+        "is_shortcut": "False"
+      },
+      "avg_word_len": {
+        "fake_mean": 5.362615609786678,
+        "real_mean": 5.263426266653379,
+        "mannwhitney_p": 0.01592587502242578,
+        "cohens_d": 0.13383946756023635,
+        "is_shortcut": "False"
+      }
+    },
+    "gossipcop": {
+      "caps_ratio": {
+        "fake_mean": 0.04256725505523315,
+        "real_mean": 0.0446413184809713,
+        "mannwhitney_p": 1.3078870911048083e-26,
+        "cohens_d": -0.07875495009235352,
+        "is_shortcut": "False"
+      },
+      "exclaim_density": {
+        "fake_mean": 0.1078778149776644,
+        "real_mean": 0.08775344228722913,
+        "mannwhitney_p": 1.6019060745448913e-12,
+        "cohens_d": 0.07732146312811622,
+        "is_shortcut": "False"
+      },
+      "type_token_ratio": {
+        "fake_mean": 0.626891928046327,
+        "real_mean": 0.6202300343674726,
+        "mannwhitney_p": 0.0161459943552485,
+        "cohens_d": 0.049949105957466274,
+        "is_shortcut": "False"
+      },
+      "avg_word_len": {
+        "fake_mean": 4.8404326167206655,
+        "real_mean": 4.84964314515953,
+        "mannwhitney_p": 0.2175109843841212,
+        "cohens_d": -0.025761572759701014,
+        "is_shortcut": "False"
+      }
+    }
+  },
+  "domain_shift": {
+    "normalized_features": {
+      "kaggle_fakenews": {
+        "word_count": 0.04311231074779755,
+        "type_token_ratio": -0.37242976095574704,
+        "caps_ratio": 0.030573866105729774,
+        "exclaim_density": -0.048227483572615706,
+        "avg_word_len": 0.05575281619011873
+      },
+      "liar": {
+        "word_count": -0.5822465918388807,
+        "type_token_ratio": 1.535897508987617,
+        "caps_ratio": -0.2051815659219075,
+        "exclaim_density": -0.20423894799813352,
+        "avg_word_len": -0.007453932222452981
+      },
+      "politifact": {
+        "word_count": -0.5858051361651735,
+        "type_token_ratio": 1.6697311279952536,
+        "caps_ratio": 0.3236572954470477,
+        "exclaim_density": -0.09881828964710351,
+        "avg_word_len": 0.16844665932981795
+      },
+      "gossipcop": {
+        "word_count": 0.35040765723923034,
+        "type_token_ratio": -0.3675554257388225,
+        "caps_ratio": 0.02289383478991351,
+        "exclaim_density": 0.24968950581029767,
+        "avg_word_len": -0.13974132430984498
+      }
+    },
+    "pairwise_distances": {
+      "kaggle_fakenews_vs_liar": 2.028965751327885,
+      "kaggle_fakenews_vs_politifact": 2.160350777047098,
+      "kaggle_fakenews_vs_gossipcop": 0.470622633893555,
+      "liar_vs_politifact": 0.5827942822506239,
+      "liar_vs_gossipcop": 2.1837001641100375,
+      "politifact_vs_gossipcop": 2.3095296214988585
+    }
+  },
+  "domain_distribution": {
+    "kaggle_fakenews": {
+      "fake": {
+        "entertainment": 0.805111821086262,
+        "general": 0.543080717870205,
+        "politics": 0.5006272738677706
+      },
+      "real": {
+        "entertainment": 0.19488817891373802,
+        "general": 0.456919282129795,
+        "politics": 0.4993727261322293
+      }
+    },
+    "liar": {
+      "fake": {
+        "entertainment": 0.4166666666666667,
+        "general": 0.42289578553314816,
+        "politics": 0.47848498431196773
+      },
+      "real": {
+        "entertainment": 0.5833333333333334,
+        "general": 0.5771042144668518,
+        "politics": 0.5215150156880323
+      }
+    },
+    "politifact": {
+      "fake": {
+        "entertainment": 0.9512195121951219,
+        "general": 0.8375855631611698,
+        "politics": 0.8113425925925926
+      },
+      "real": {
+        "entertainment": 0.04878048780487805,
+        "general": 0.1624144368388301,
+        "politics": 0.1886574074074074
+      }
+    },
+    "gossipcop": {
+      "fake": {
+        "entertainment": 0.253641955325348,
+        "general": 0.22960610871701823,
+        "politics": 0.29900332225913623
+      },
+      "real": {
+        "entertainment": 0.7463580446746519,
+        "general": 0.7703938912829817,
+        "politics": 0.7009966777408638
+      }
+    }
+  },
+  "topic_leakage": {
+    "kaggle_fakenews": {
+      "entertainment": 0.19488817891373802,
+      "general": 0.456919282129795,
+      "politics": 0.4993727261322293,
+      "leakage_detected": true
+    },
+    "liar": {
+      "entertainment": 0.5833333333333334,
+      "general": 0.5771042144668518,
+      "politics": 0.5215150156880323,
+      "leakage_detected": false
+    },
+    "politifact": {
+      "entertainment": 0.04878048780487805,
+      "general": 0.1624144368388301,
+      "politics": 0.1886574074074074,
+      "leakage_detected": true
+    },
+    "gossipcop": {
+      "entertainment": 0.7463580446746519,
+      "general": 0.7703938912829817,
+      "politics": 0.7009966777408638,
+      "leakage_detected": true
+    }
+  }
+}
